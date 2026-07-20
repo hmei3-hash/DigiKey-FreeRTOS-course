@@ -14,6 +14,14 @@ My solutions and demos from [Shawn Hymel's Introduction to RTOS](https://www.you
 | `queue_demo/` | Queues (Demo) | Producer sends integers to a FreeRTOS queue; consumer prints them — basic `xQueueSend` / `xQueueReceive` usage. |
 | `queue_challenge/` | Queues (Challenge) | Serial command parser: typing `delay <ms>` queues a blink duration for a second task, which toggles the LED and sends a confirmation back through a second queue. |
 
+## Tech Stack
+
+- **Language:** C / C++ (Arduino framework)
+- **RTOS:** FreeRTOS (ESP-IDF port)
+- **Key APIs:** `xTaskCreatePinnedToCore`, `vTaskDelay`, `xQueueCreate`, `xQueueSend`, `xQueueReceive`, `pvPortMalloc`, `vPortFree`, `uxTaskGetStackHighWaterMark`
+- **Concepts:** Task creation & scheduling, task priorities & preemption, shared `volatile` variables, memory allocation (stack vs heap), inter-task communication with queues, non-blocking delays
+- **Peripherals:** GPIO (digital output, PWM), Serial (UART), ADC
+
 ## Hardware
 
 - **Board:** ESP32-S3-CAM (or any ESP32-S3 dev board)
